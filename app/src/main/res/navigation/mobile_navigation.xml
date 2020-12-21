@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_categories">
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.dlgsoft.freemarket.ui.main.home.categories.CategoriesFragment"
+        android:label="@string/title_categories"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_navigation_categories_to_navigation_products"
+            app:destination="@id/navigation_products" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="com.dlgsoft.freemarket.ui.main.home.products.ProductsFragment"
+        android:label="{categoryName}"
+        tools:layout="@layout/fragment_products">
+        <argument
+            android:name="categoryId"
+            app:argType="long" />
+        <argument
+            android:name="categoryServerId"
+            app:argType="string" />
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.dlgsoft.freemarket.ui.main.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

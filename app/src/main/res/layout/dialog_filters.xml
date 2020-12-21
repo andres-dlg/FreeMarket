@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    style="@style/CustomDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/filters_dialog_margin"
+    tools:background="@color/black">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintBottom_toBottomOf="@+id/background_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_top" />
+
+    <View
+        android:id="@+id/background_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_border_height"
+        android:layout_marginBottom="@dimen/dialog_border_top_bottom_margin"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <View
+        android:id="@+id/background_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_border_height"
+        android:layout_marginTop="@dimen/dialog_border_bottom_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_apply"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/button_fixed_size"
+        android:layout_height="@dimen/button_fixed_size"
+        android:layout_marginHorizontal="@dimen/dialog_close_horizontal_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close_white_24dp"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filters"
+        android:textSize="@dimen/dialog_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dialog_content_bottom_margin"
+        android:padding="@dimen/dialog_content_padding"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:itemCount="2"
+        tools:listitem="@layout/price_view" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="@string/apply"
+        android:textColor="@drawable/text_color_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:textColor="@color/androidDark"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_apply"
+        app:layout_constraintEnd_toStartOf="@+id/btn_apply"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_apply" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

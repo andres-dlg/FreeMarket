@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FreeMarket</string>
+    <string name="title_categories">Categorias</string>
+    <string name="title_products">Productos</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_notifications">Notificationes</string>
+    <string name="no_network_connectivity">No hay conexión a internet</string>
+    <string name="buy">Comprar</string>
+    <string name="description">Descripción</string>
+    <string name="loading">Cargando</string>
+    <string name="error">Error</string>
+    <string name="nombre">Nombre</string>
+    <string name="default_user_name">Andrés</string>
+    <string name="default_user_lastname">De La Grana</string>
+    <string name="apellido">Apellido</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="default_user_birthday">17/07/1994</string>
+    <string name="region">Región</string>
+    <string name="date">%d/%d/%d</string>
+    <string name="region_message">Para aplicar el cambio de region a %s, la apliacion necesita reiniciarse. ¿Desea continuar?</string>
+    <string name="search">Buscar</string>
+    <string name="search_hint">Buscar…</string>
+    <string name="filter">Filtro</string>
+    <string name="apply">Aplicar</string>
+    <string name="close">Cerrar</string>
+    <string name="filters">Filtros</string>
+    <string name="dash">-</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="price">Precio</string>
+    <string name="subcategories">SubcategorÍa</string>
+    <string name="min_price_error">No puede superar al máximo</string>
+    <string name="max_price_error">No puede ser inferior al mínimo</string>
+    <string name="filter_error">Error al intentar aplicar filtros</string>
+    <string name="product_error">Error al recuperar información del producto</string>
+</resources>

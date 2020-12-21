@@ -1,0 +1,84 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="category_avatar_size">64dp</dimen>
+    <dimen name="category_text_size">18sp</dimen>
+    <dimen name="category_item_padding">16dp</dimen>
+    <dimen name="category_text_start_margin">8dp</dimen>
+
+    <dimen name="progress_text_size">14sp</dimen>
+    <dimen name="progress_top_margin">8dp</dimen>
+    <dimen name="progress_size">48dp</dimen>
+
+    <dimen name="dot_size">4dp</dimen>
+
+    <dimen name="card_horizontal_margin">16dp</dimen>
+    <dimen name="card_vertical_margin">8dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <dimen name="product_card_height">250dp</dimen>
+    <dimen name="product_item_name_horizontal_magin">16dp</dimen>
+    <dimen name="product_item_name_bottom_magin">4dp</dimen>
+    <dimen name="product_item_name_text_size">16sp</dimen>
+    <dimen name="product_item_price_horizontal_magin">16dp</dimen>
+    <dimen name="product_item_price_bottom_magin">16dp</dimen>
+    <dimen name="product_item_price_text_size">20sp</dimen>
+    <dimen name="product_detail_card_margin">8dp</dimen>
+    <dimen name="product_detail_card_padding">16dp</dimen>
+    <dimen name="product_detail_title_text_size">18sp</dimen>
+    <dimen name="product_detail_location_icon_size">24dp</dimen>
+    <dimen name="product_detail_location_icon_top_margin">16dp</dimen>
+    <dimen name="product_detail_location_text_start_margin">4dp</dimen>
+    <dimen name="product_detail_location_text_size">14sp</dimen>
+    <dimen name="product_detail_condition_text_size">14sp</dimen>
+    <dimen name="product_detail_location_price_top_margin">16dp</dimen>
+    <dimen name="product_detail_price_text_size">20sp</dimen>
+    <dimen name="product_detail_description_header_size">8sp</dimen>
+
+    <dimen name="button_fixed_size">24dp</dimen>
+    <dimen name="button_top_margin">16dp</dimen>
+    <dimen name="filters_dialog_margin">16dp</dimen>
+    <dimen name="button_radius">24dp</dimen>
+
+    <dimen name="filter_header_size">6sp</dimen>
+    <dimen name="space_height_16dp">16dp</dimen>
+    <dimen name="default_layout_padding">16dp</dimen>
+    <dimen name="fab_button_margin">16dp</dimen>
+    <dimen name="splash_app_logo_height">48dp</dimen>
+
+    <dimen name="dialog_radius">10dp</dimen>
+    <dimen name="dialog_border_top_bottom_margin">16dp</dimen>
+    <dimen name="dialog_border_height">1dp</dimen>
+    <dimen name="dialog_border_bottom_bottom_margin">16dp</dimen>
+    <dimen name="dialog_close_horizontal_margin">16dp</dimen>
+    <dimen name="dialog_title_text_size">18sp</dimen>
+    <dimen name="dialog_content_bottom_margin">8dp</dimen>
+    <dimen name="dialog_content_padding">16dp</dimen>
+
+    <dimen name="badge_size">8dp</dimen>
+    <dimen name="badge_bottom_margin">12dp</dimen>
+
+    <dimen name="profile_avatar_size">120dp</dimen>
+    <dimen name="profile_avatar_elevation">8dp</dimen>
+    <dimen name="profile_field_top_margin">16dp</dimen>
+    <dimen name="profile_field_start_margin">12dp</dimen>
+    <dimen name="profile_region_text_size">18sp</dimen>
+
+    <dimen name="header_view_margin">8dp</dimen>
+    <dimen name="price_dash_top_margin">24dp</dimen>
+
+    <dimen name="product_detail_attribute_header_margin">8dp</dimen>
+    <dimen name="product_detail_attribute_header_text_size">16sp</dimen>
+    <dimen name="product_detail_attribute_value_margin_horizontal">8dp</dimen>
+    <dimen name="product_detail_attribute_value_margin_top">4dp</dimen>
+    <dimen name="product_detail_attribute_value_margin_bottom">8dp</dimen>
+    <dimen name="product_detail_attribute_value_text_size">18sp</dimen>
+
+    <dimen name="product_slider_height">250dp</dimen>
+    <dimen name="product_slider_tabs_height">36dp</dimen>
+    <dimen name="product_slider_tabs_start_margin">24dp</dimen>
+    <dimen name="product_slider_tabs_padding_horizontal">8dp</dimen>
+</resources>

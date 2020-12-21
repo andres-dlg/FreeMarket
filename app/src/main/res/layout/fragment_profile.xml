@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Esta pantalla no esta elaborada ya que solo se utilizará para cambiar la region -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="@dimen/profile_avatar_size"
+            android:layout_height="@dimen/profile_avatar_size"
+            android:elevation="@dimen/profile_avatar_elevation"
+            android:src="@drawable/placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_field_top_margin"
+            android:hint="@string/nombre"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/input_layout_lastname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_photo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="@string/default_user_name" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_field_top_margin"
+            android:hint="@string/apellido"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/input_layout_birthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="@string/default_user_lastname" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_field_top_margin"
+            android:hint="@string/fecha_nacimiento"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/region_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_lastname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_text_birthday"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="date"
+                android:text="@string/default_user_birthday" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/region_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/profile_field_top_margin"
+            android:layout_marginStart="@dimen/profile_field_start_margin"
+            android:text="@string/region"
+            android:textSize="@dimen/profile_region_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/region_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_birthday" />
+
+        <Spinner
+            android:id="@+id/region_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/region_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/region_text"
+            app:layout_constraintTop_toTopOf="@+id/region_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

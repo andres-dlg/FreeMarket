@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_card_height"
+    android:layout_marginHorizontal="@dimen/card_horizontal_margin"
+    android:layout_marginVertical="@dimen/card_vertical_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/placeholder" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/black_gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".45"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/product_item_name_horizontal_magin"
+            android:layout_marginBottom="@dimen/product_item_name_bottom_magin"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_font"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/product_item_name_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/price"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Termo Ztlanleyn" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/product_item_price_horizontal_magin"
+            android:layout_marginBottom="@dimen/product_item_price_bottom_magin"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_font"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/product_item_price_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="$1500" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

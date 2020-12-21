@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_min_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/min"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/dash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_min_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/price_dash_top_margin"
+        android:text="@string/dash"
+        app:layout_constraintEnd_toStartOf="@id/input_layout_max_price"
+        app:layout_constraintStart_toEndOf="@id/input_layout_min_price"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_min_price" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_max_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/max"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:prefixText="$">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_max_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
